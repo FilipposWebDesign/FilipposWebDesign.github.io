@@ -1,0 +1,313 @@
+:root {
+    --degrade-oscuro: #2d6069;
+    --azul-ultramar: #183263;
+    --azul-urumepa: #366b9d;
+    --azul-pastel: #a1b5cc;
+    --celeste: #86c1c4;
+    --verde-agua-uno: #9bd2b2;
+    --verde-agua: #78d799;
+    --azul-petroleo: #2d6069;
+    --verde-urumepa: #0ea35a;
+    --blanco: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 2000px;
+    /* background-color: var(--azul-petroleo); */
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(/assets/img/Tortuga_q5ZHaUx_1200w.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    position: relative;
+
+    & .logo-uru {
+        width: 50%;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        margin-left: 100px;
+        padding-top: 100px;
+        /* background-color: antiquewhite; */
+        text-wrap: nowrap;
+
+        /* & img {
+        } */
+
+        & p {
+            font-size: 40px;
+            margin-left: 350px;
+            margin-top: -60px;
+            color: #fff;
+            font-family: "Merienda", cursive;
+            display: block;
+        }
+    }
+}
+
+.menu-lateral {
+    width: 50px;
+    height: 350px;
+    border-radius: 15px;
+    background-color: #fff3;
+    border: 1px solid #fff;
+
+    display: flex;
+    flex-direction: column;
+
+    position: fixed;
+    right: 10px;
+    top: 180px;
+
+    transition: .5s ease-in-out;
+    overflow: hidden;
+
+    z-index: 9;
+
+    & .item-menu-lateral {
+        width: 100%;
+        height: 50px;
+
+        display: flex;
+        align-items: center;
+
+        & i {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            color: #fff;
+            margin-left: 5px;
+        }
+
+        & p {
+            margin-left: 10px;
+            white-space: nowrap;
+            color: #fff;
+        }
+
+    }
+}
+
+.menu-lateral:hover {
+    width: 250px;
+}
+
+.menu-bajo {
+    width: 100%;
+    height: 100px;
+
+    display: flex;
+    justify-content: center;
+
+    position: absolute;
+    bottom: 0;
+
+    & .ul-menu-bajo {
+        width: 90%;
+        height: 100%;
+
+        display: flex;
+
+        & .li-menu-bajo {
+            width: 14.28%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+
+            align-items: center;
+
+            & a {
+                width: fit-content;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                overflow: hidden;
+
+                color: #fff;
+                font-size: 18px;
+                font-weight: bold;
+
+                & img {
+                    height: 80%;
+                }
+
+                & .linea {
+                    width: 10px;
+                    height: 2px;
+                    background-color: #fff;
+                    top: 0;
+                    visibility: hidden;
+                    transform: translateX(-100px);
+                }
+
+                & .linea-nosotros {
+                    width: 97px;
+                }
+
+                & .linea-actividades {
+                    width: 120px;
+                }
+
+                & .linea-educacion {
+                    width: 105px;
+                }
+
+                & .linea-voluntarios {
+                    width: 126px;
+                }
+
+                & .linea-colaboradores {
+                    width: 157px;
+                }
+
+                & .linea-galeria {
+                    width: 77px;
+                }
+            }
+        }
+
+        & a:hover .linea {
+            visibility: visible;
+            transform: translateX(0px);
+            transition: .5s ease-in-out;
+        }
+    }
+}
+
+.menu-bajo-degr {
+    background: linear-gradient(transparent, var(--degrade-oscuro));
+    & a {
+        color: var(--azul-ultramar);
+     }
+}
+
+.menu-bajo.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: none;
+    z-index: 1000;
+    transition: .5s ease-in-out;
+    background-color: var(--azul-petroleo);
+    border-bottom: 1px solid var(--blanco);
+}
+
+main {
+    width: 100%;
+    height: 2000px;
+    background-color: var(--degrade-oscuro);
+    display: flex;
+    flex-direction: column;
+
+    & .relleno {
+        width: 100%;
+        height: 100px;
+        background-color: var(--azul-petroleo);
+    }
+
+    & .section-uno {
+        width: 100%;
+        height: 600px;
+        background-image: url(/assets/img/fondo-frase-nos-600.svg);
+
+        & .section-up {
+            width: 1005;
+            height: 50%;
+
+            display: flex;
+
+            & .section-up-left {
+                width: 50%;
+                height: 100%;
+                /* background-color: orange; */
+                padding-left: 150px;
+                padding-top: 50px;
+
+                & .conjunto {
+
+                    & h1 {
+                        font-size: 60px;
+                        color: var(--blanco);
+                        font-family: "Questrial", sans-serif;
+                    }
+
+                    & p {
+                        color: var(--verde-agua);
+                    }
+                }
+            }
+
+            & .section-up-right {
+                width: 50%;
+                height: 100%;
+                /* background-color: green; */
+                /* padding-left: 50px; */
+                padding-top: 50px;
+
+                & p {
+                    color: var(--blanco);
+                    font-size: 22px;
+                    font-family: "Questrial", sans-serif;
+                }
+            }
+        }
+
+        & .section-bottom {
+            & p {
+                color: var(--blanco);
+                font-size: 25px;
+                font-family: "Questrial", sans-serif;
+                padding-left: 100px;
+                padding-top: 125px;
+                letter-spacing: 2px;
+
+                & span {
+                    color: var(--azul-petroleo);
+                }
+            }
+        }
+    }
+
+    & .section-dos {
+        width: 100%;
+        height: 600px;
+        background-image: url(/assets/img/fondo-frase-nos-inv-375.svg);
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: flex-end;
+
+        & button {
+            position: relative;
+            width: 300px;
+            height: 100px;
+            border: none;
+            border-radius: 50px;
+            background-color: var(--azul-petroleo);
+            font-size: 27px;
+            margin-right: 150px;
+            bottom: 50px;
+            color: var(--blanco);
+        }
+    }
+
+    & .section-tres {
+        
+    }
+}
