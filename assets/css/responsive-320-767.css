@@ -1,0 +1,50 @@
+:root {
+    --degrade-oscuro: #2d6069;
+    --azul-ultramar: #183263;
+    --azul-urumepa: #366b9d;
+    --azul-pastel: #a1b5cc;
+    --celeste: #86c1c4;
+    --verde-agua-uno: #9bd2b2;
+    --verde-agua: #78d799;
+    --azul-petroleo: #2d6069;
+    --verde-urumepa: #0ea35a;
+    --blanco: #fff;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+    * {
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        list-style: none;
+        box-sizing: border-box;
+    }
+
+    body {
+        width: 100%;
+        background-color: red;
+        display: flex;
+        flex-direction: column;
+    }
+
+    header {
+        width: 100%;
+        height: fit-content;
+        background-image: url(/assets/img/Tortuga_q5ZHaUx_1200w.jpg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-color: orange;
+
+        & .logo-uru {
+
+            & img {
+                max-width: 100%;
+
+            }
+
+            & p {
+                display: none;
+            }
+        }
+    }
+}
