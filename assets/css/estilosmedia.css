@@ -27,7 +27,7 @@ body {
 }
 
 /* MAX 319 */
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 320px) {
 
     body {
         display: flex;
