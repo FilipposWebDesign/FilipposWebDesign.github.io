@@ -1,0 +1,181 @@
+:root {
+    --degrade-oscuro: #2d6069;
+    --azul-ultramar: #183263;
+    --azul-urumepa: #366b9d;
+    --azul-pastel: #a1b5cc;
+    --celeste: #86c1c4;
+    --verde-agua-uno: #9bd2b2;
+    --verde-agua: #78d799;
+    --azul-petroleo: #2d6069;
+    --verde-urumepa: #0ea35a;
+    --blanco: #fff;
+
+    --altura-nav: 60px;
+    --padding-left-right: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 100%;
+}
+
+/* MAX 319 */
+@media only screen and (max-width: 320px) {
+
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-bar {
+        width: 100%;
+        height: var(--altura-nav);
+        padding: 0 var(--padding-left-right);
+        /* border: 5px solid black; */
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+
+        position: relative;
+
+        & .logo {
+            height: 70%;
+            width: 50%;
+            background-image: url(/assets/img/logo-urumepa-verde-40h.png);
+            background-repeat: no-repeat;
+        }
+
+        .label_hamburguesa {
+        }
+        .material-symbols-outlined {
+        }
+        .menu-hamb {
+        }
+        .menu-hamburguesa {
+            display: none;
+        }
+        .menu-hamburguesa:checked + .ul-links {
+            /* height: calc(100vh - var(--altura-nav)); */
+            height: 250px;
+        }
+        .ul-links {
+            background-color: white;
+            width: 100%;
+            height: 0;
+            position: absolute; /* A lo que el padfe tiene position relative, este contenedor se posiciona encima del padre */
+            top: var(--altura-nav);
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px; /*Separacion del contennido*/
+            overflow: hidden;
+            transition: all .6s;
+        }
+        .li-links {
+
+        }
+
+        .links {
+            font-size: 20px;
+        }
+        
+    }
+
+    header {
+        width: 100%;
+        height: 200px;
+        background-image: url(/assets/img/Tortuga_q5ZHaUx_1200w.jpg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    main {
+        width: 100%;
+        height: fit-content;
+    }
+}
+
+/* MIN 320 - MAX 767 */
+@media only screen and (min-width: 321px) and (max-width: 768px) {
+
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-hamburguesa {
+        width: 100%;
+        height: 100px;
+        background-color: green;
+        border: 5px solid black;
+        display: flex;
+        justify-content: space-between;
+
+        & .logo {
+            height: 100%;
+            width: 50%;
+            background-image: url(/assets/img/logo-urumepa-verde-80h.png);
+            background-repeat: no-repeat;
+        }
+
+        & .lista {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            & .menu-nav-ocul {
+                display: none;
+            }
+        }
+    }
+
+}
+
+/* MIN 768 - MAX 1024 */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-hamburguesa {
+        width: 100%;
+        height: 100px;
+        background-color: blue;
+        border: 5px solid black;
+    }
+
+}
+
+/* MIN 1024 */
+@media only screen and (min-width: 1024px) {
+
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-hamburguesa {
+        width: 100%;
+        height: 100px;
+        background-color: yellow;
+        border: 5px solid black;
+    }
+
+}

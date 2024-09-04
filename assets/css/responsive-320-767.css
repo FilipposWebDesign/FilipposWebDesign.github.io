@@ -11,7 +11,7 @@
     --blanco: #fff;
 }
 
-@media only screen and (min-width: 320px) and (max-width: 768px) {
+@media only screen and (max-width: 412px) {
     * {
         margin: 0;
         padding: 0;
@@ -21,30 +21,66 @@
     }
 
     body {
-        width: 100%;
-        background-color: red;
+        max-width: 412px;
+        height: fit-content;
+        /* background-color: red; */
         display: flex;
         flex-direction: column;
     }
 
     header {
-        width: 100%;
-        height: fit-content;
-        background-image: url(/assets/img/Tortuga_q5ZHaUx_1200w.jpg);
-        background-repeat: no-repeat;
-        background-size: 100%;
-        background-color: orange;
+        max-width: 412px;
+        height: 600px;
+        background-color: tan;
 
-        & .logo-uru {
+        & .cabecera-h768 {
+            max-width: 412px;
+            height: 40px;
+            background-color: var(--blanco);
+            display: flex;
+            align-items: center;
 
-            & img {
-                max-width: 100%;
+            & .logo {
+                width: 25%;
+                height: 100%;
 
+                display: flex;
+                align-items: center;
+                background-color: red;
+
+                & img {
+                    height: 80%;
+                }
             }
 
-            & p {
-                display: none;
+            & .menu {
+                width: 75%;
+                height: 100%;
+
+                display: flex;
+                align-items: center;
+                background-color: blue;
             }
         }
+
+        background-image: none;
+        /* background-image: url(/assets/img/Tortuga_q5ZHaUx_1200w.jpg); */
+        /* background-size: 412px; */
+
+        & .logo-uru {
+           display: none;
+        }
+
+        & .menu-lateral {
+            display: none;
+        }
+
+        & .menu-bajo {
+            display: none;
+        }
+    }
+
+    & main {
+        display: none;
     }
 }
